@@ -11,7 +11,7 @@ gz = gzip.GzipFile(filename1,'rb')
 dd=np.frombuffer(gz.read(),dtype=np.float32)
 pre=dd.reshape((1200,3600))
 lon=np.linspace(0.05,359.95,3600)
-lat=np.linspace(59.95,-59.95,1200)
+lat=np.linspace(-59.95,59.95,1200)
 
 fig, ax = plt.subplots(figsize=(16,6))
 lon_leftup=0;lat_leftup=60
